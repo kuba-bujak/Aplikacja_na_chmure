@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+  }
+  /*
+   * Formatting the header area
+   */
+  header {
+    height: 96px;
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 1.4em;
+    background-color: lavender;
+  }
+  
+  header #logo {
+    width:20%;
+    margin-left: 50px;
+    float: left;
+    opacity: 0.8;
+  }
+
+  header #navigation {
+    float: right; 
+    margin-right: 100px;
+  }
+
+  header #navigation li
+  {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  header #navigation li a
+  {
+    text-decoration: none;
+    color: black;
+  }
+
+  header #navigation li a:hover{
+    color: #555;
+    text-decoration: underline;
+  }
+  /*
+   * Centering the body content - menu
+   */
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    min-height: 1250px;
+    text-align: center;
+  }
+
+  .container .page-header{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .container .main-options{
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+    margin-right: 10px;
+    background-color: lavender;
+    border-radius: 10px;
+  }
+
+  .main-options .article-header{
+    color: #444;
+  }
+  .main-options #article-image-aboutme{
+    height: 400px;
+    background: url("/static/myPhoto.jpg") no-repeat 0px 0px;
+    background-size: cover;
+  }
+
+  .main-options #article-image-gallery{
+    height: 400px;
+    background: url("/static/myPhoto.jpg") no-repeat 0px 0px;
+    background-size: cover;
+  }
+
+  .main-options #article-image-contact{
+    height: 400px;
+    background: url("/static/myPhoto.jpg") no-repeat 0px 0px;
+    background-size: cover;
+  }
+  
+
+  .main-options .article-image:hover{
+    cursor: pointer;
+  }
+
+  .main-options p{
+    padding: 10px 10px 10px 20px;
+    text-align: left;
+    font-size: 0.9em;
+  }
+
+   /*
+   * Centering the body content - blog
+   */
+
+   #blog{
+     width: 70%;
+     margin: 50px auto 0 auto;
+   }
+
+   #blog h2 {
+     text-align: center;
+     font-size: 1.7em;
+     font-weight: bold;
+     margin-bottom: 50px;
+    }
+
+   #blog .blog-container{
+     padding: 10px;
+     margin-bottom: 30px;
+     background-color: lavender;
+     border-radius: 10px;
+   } 
+
+   #blog .blog-container .blog-image{
+     float: left;
+     height: 130px;
+     width: 130px;
+     text-align: center;
+     background: url("/static/logo.png") no-repeat 0px 0px;
+     background-size: cover;
+     margin-right: 20px;
+     border-radius: 10px;
+   }
+
+  /*
+   * FOOTER
+   */
+
+   footer{
+     background-color: black;
+     font-size: 0.8em;
+     text-transform: uppercase;
+     color: white;
+     padding: 15px;
+     text-align: center;
+     letter-spacing: 1px;
+   }
+
+   footer a{
+     color: white;
+     text-decoration: none;
+   }
+
+
+  /*
+   * ABOUT ME
+   */
+
+   .container #aboutme-container{
+     margin-top: 20px;
+     padding: 10px;
+   }
+
+   .container #aboutme-container #aboutme-photo{
+     display: inline-block;
+     background: url("/static/myPhoto.jpg") no-repeat 0px 0px;
+     background-position: right;
+     background-size: cover;
+     width: 40%;
+     height: 800px;
+     border-radius: 20%;
+     margin-right: 50px;
+   }
+
+   .container #aboutme-container .aboutme-text{
+     display: inline-block;
+     width: 40%;
+     font-size: 1.3em;
+     height: 800px;
+   }
+
+   /*
+   * GALLERY
+   */
+
+   .postcard
+{
+	display: inline-block;
+	width: 460px;
+	text-align: center;
+	padding: 5px;
+}
+
+.postcard p
+{
+	padding: 5px;
+	margin-top: 10px;
+}
+
+.photo
+{
+	width: 450px;
+	transition: all 0.2s ease-in-out;
+}
+
+.photo:hover
+{
+	-webkit-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+}
+
+#contact-container{
+  text-align: left;
+  font-size: 1.3em;
+}

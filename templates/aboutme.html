@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+<body>
+<header>
+    <div id="logo">
+        <a href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='logo.png') }}"/>
+        </a>
+    </div>
+    <nav>
+        <ul id="navigation">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('aboutme') }}">About</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="container">
+    <h2 class='page-header'>Who am I?</h2>
+    <div id="aboutme-container">
+        <div id="aboutme-photo"></div>
+        <p class="aboutme-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed faucibus sem. Praesent ut metus lorem.
+            Etiam vel consequat sem. Mauris mi eros, rutrum id molestie a, interdum in urna. Cras eu felis tempor,
+            scelerisque sem vel, mollis neque. Donec malesuada, diam non tristique posuere, lorem mi tristique lectus,
+            id iaculis urna felis eu sem. Phasellus imperdiet nunc sed odio bibendum, et lobortis arcu dapibus. Nulla eu
+            nibh eu libero imperdiet finibus.
+
+            In sed vulputate lorem. Sed vel sem lobortis, efficitur ipsum at, ornare neque. Mauris id eros consectetur,
+            sollicitudin magna id, porttitor nibh. Vestibulum placerat varius volutpat. Curabitur facilisis laoreet
+            tortor, ut molestie metus finibus vel. Vestibulum tortor nibh, semper eget ante non, elementum pharetra
+            ipsum. Nullam eget suscipit risus. Maecenas sapien mauris, bibendum a velit nec, blandit mattis mauris.
+            Pellentesque commodo rutrum arcu, eu ultricies elit.
+        </p>
+    </div>
+</main>
+<footer id="footer">
+    PROJEKT I WYKONANIE <a href="https://www.facebook.com/kuba.bujak.182">Jakub Bujak</a>
+</footer>
+</body>
+</html>

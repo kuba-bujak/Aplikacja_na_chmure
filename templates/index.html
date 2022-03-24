@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+<header>
+    <div id="logo">
+        <a href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='logo.png') }}"/>
+        </a>
+    </div>
+    <nav>
+        <ul id="navigation">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('aboutme') }}">About</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="container">
+    <div class="main-options">
+        <h2 class="article-header">
+            Who am I?
+        </h2>
+        <a href="{{ url_for('aboutme') }}">
+            <div id="article-image-aboutme"></div>
+        </a>
+        <p>
+            I am a professional athlete. My main competitions are hurdles and sprints but in the past
+            I was high jumper.
+            <a href="{{ url_for('aboutme') }}">Read more...</a>
+        </p>
+    </div>
+    <div class="main-options">
+        <h2 class="article-header">
+            Watch my sport gallery
+        </h2>
+        <a href="{{ url_for('aboutme') }}">
+            <div id="article-image-gallery"></div>
+        </a>
+        <p>
+            I have been starting in many competitions so there's a lot of pictures from my carrery.
+            <a href="{{ url_for('gallery') }}">Enjoy some of them</a>
+        </p>
+    </div>
+    <div class="main-options">
+        <h2 class="article-header">
+            Do you want contact me?
+        </h2>
+        <a href="{{ url_for('aboutme') }}">
+            <div id="article-image-contact"></div>
+        </a>
+        <p>
+            If you want send me message <br><br>
+            <a href="{{ url_for('contact') }}">Click here</a>
+        </p>
+    </div>
+    <article id="blog">
+        <h2>MY BLOG</h2>
+        <div class="blog-container">
+            <div class="blog-image"></div>
+            <div class="blog-content">
+                <h3>Title1</h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <a href="">See more...</a>
+                </p>
+            </div>
+        </div>
+        <div class="blog-container">
+            <div class="blog-image"></div>
+            <div class="blog-content">
+                <h3>Title2</h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <a href="">See more...</a>
+                </p>
+            </div>
+        </div>
+        <div class="blog-container">
+            <div class="blog-image"></div>
+            <div class="blog-content">
+                <h3>Title3</h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <a href="">See more...</a>
+                </p>
+            </div>
+        </div>
+        <div class="blog-container">
+            <div class="blog-image"></div>
+            <div class="blog-content">
+                <h3>Title4</h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <a href="">See more...</a>
+                </p>
+            </div>
+        </div>
+        <div class="blog-container">
+            <div class="blog-image"></div>
+            <div class="blog-content">
+                <h3>Title5</h3>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <a href="">See more...</a>
+                </p>
+            </div>
+        </div>
+    </article>
+</main>
+<footer id="footer">
+    PROJEKT I WYKONANIE <a href="https://www.facebook.com/kuba.bujak.182">Jakub Bujak</a>
+</footer>
+
+</body>
+</html>

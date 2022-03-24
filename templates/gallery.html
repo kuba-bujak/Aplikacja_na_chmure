@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+<header>
+    <div id="logo">
+        <a href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='logo.png') }}"/>
+        </a>
+    </div>
+    <nav>
+        <ul id="navigation">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('aboutme') }}">About</a></li>
+            <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="container">
+    <h2 id="page-header">My Gallery</h2>
+    <div class="postcard">
+
+        <div class="photo">
+            <a href="#"><img src="static/01.jpg" alt="Taktsang"></a>
+        </div>
+        <p>Klasztor Taktsang - dolina Paro, Bhutan</p>
+
+    </div>
+
+    <div class="postcard">
+
+        <div class="photo">
+            <a href="static/02.jpg"><img src="static/02.jpg" alt="Arashiyama"></a>
+        </div>
+        <p>Las bambusowy Arashiyama - Kyoto, Japonia</p>
+
+    </div>
+
+    <div class="postcard">
+
+        <div class="photo">
+            <a href="#"><img src="static/03.jpg" alt="Bryce Canyon"></a>
+        </div>
+        <p>Park Narodowy Bryce Canyon - Utah, USA</p>
+
+    </div>
+
+    <div class="postcard">
+
+        <div class="photo">
+            <a href="#"><img src="static/04.jpg" alt="Taj Mahal"></a>
+        </div>
+        <p>Mauzoleum Taj Mahal - Agra, Indie</p>
+
+    </div>
+
+
+    <div class="postcard">
+
+        <div class="photo">
+            <a href="#"><img src="static/05.jpg" alt="Serengeti"></a>
+        </div>
+        <p>Park Narodowy Serengeti, Tanzania</p>
+
+    </div>
+
+    <div class="postcard">
+
+        <div class="photo">
+            <a href="#"><img src="static/06.jpg" alt="Mu Cang Chai"></a>
+        </div>
+        <p>Dystrykt Mu Cang Chai - Yen Bai, Wietnam</p>
+    </div>
+</main>
+
+<footer id="footer">
+    PROJEKT I WYKONANIE <a href="https://www.facebook.com/kuba.bujak.182">Jakub Bujak</a>
+</footer>
+</body>
+</html>
