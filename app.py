@@ -23,6 +23,10 @@ def gallery():
 def contact():
     return render_template('contact.html')
 
+@app.route("/slider")
+def slider():
+    return render_template('slider.html')
+
 '''OBSLUGA BLEDOW'''
 
 @app.route('/error_denied')
