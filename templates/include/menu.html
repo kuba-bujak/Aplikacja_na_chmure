@@ -5,25 +5,28 @@
     <title>Title</title>
 </head>
 <body>
-{% set navigation = [
-{'url': 'slider', 'display_name': 'Home2'},
-{'url': 'aboutme', 'display_name': 'About Me'},
-{'url': 'gallery', 'display_name': 'Gallery'},
-{'url': 'contact', 'display_name': 'Contact'}
-] -%}
-{% set active_page = active_page|default('index') -%}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<div class="container-fluid">
-<div class="collapse navbar-collapse" id="navbarNavDropdown">
-<ul class="navbar-nav">
-{% for item in navigation %}
-<li class="nav-item">
-<a class="nav-link {% if item['url'] == active_page %} active {% endif %}" href="{{url_for(item['url']) }}">{{ item['display_name'] }}</a>
-</li>
-{% endfor %}
-</ul>
-</div>
-</div>
-</nav>
+    {% set navigation = [
+        {'url': 'home', 'display_name': 'Home'},
+        {'url': 'aboutme', 'display_name': 'About Me'},
+        {'url': 'gallery', 'display_name': 'Gallery'},
+        {'url': 'contact', 'display_name': 'Contact'}
+    ] -%}
+    {% set active_page = active_page|default('index') -%}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+    {% for item in navigation %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if item['url'] == active_page %} active {% endif %}"
+                           href="{{url_for(item['url']) }}">
+                            {{ item['display_name'] }}
+                        </a>
+                    </li>
+    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
 </body>
 </html>
