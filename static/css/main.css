@@ -189,8 +189,6 @@ body {
 
    .postcard
 {
-	display: inline-block;
-	width: 460px;
 	text-align: center;
 	padding: 5px;
 }
@@ -203,7 +201,6 @@ body {
 
 .photo
 {
-	width: 450px;
 	transition: all 0.2s ease-in-out;
 }
 
