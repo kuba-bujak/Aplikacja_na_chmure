@@ -5,45 +5,22 @@ body {
     color: #444;
   }
   /*
-   * Formatting the header area
+   * Formatting the nav bar area
    */
-  header {
-    height: 96px;
-    width: 100%;
-    margin-bottom: 50px;
-    font-size: 1.4em;
-    background-color: lavender;
-  }
   
-  header #logo {
-    width:20%;
-    margin-left: 50px;
-    float: left;
-    opacity: 0.8;
+  #navbar-image::before{
+    content: url(../logo.png);
+    width: 50px;
+    height: 50px;
+    margin-right: 60px; 
   }
 
-  header #navigation {
-    float: right; 
-    margin-right: 100px;
-  }
-
-  header #navigation li
-  {
-    display: inline-block;
+  .navbar-nav{
+    font-size: 2.5em;
     padding: 10px;
-    margin-right: 10px;
   }
 
-  header #navigation li a
-  {
-    text-decoration: none;
-    color: black;
-  }
 
-  header #navigation li a:hover{
-    color: #555;
-    text-decoration: underline;
-  }
   /*
    * Centering the body content - menu
    */
@@ -62,33 +39,14 @@ body {
   }
 
   .container .main-options{
-    display: inline-block;
-    width: 30%;
     text-align: center;
-    margin-right: 10px;
     background-color: lavender;
     border-radius: 10px;
   }
 
   .main-options .article-header{
     color: #444;
-  }
-  .main-options #article-image-aboutme{
-    height: 400px;
-    background: url("/static/myPhoto.jpg") no-repeat 0px 0px;
-    background-size: cover;
-  }
-
-  .main-options #article-image-gallery{
-    height: 400px;
-    background: url("/static/myPhoto.jpg") no-repeat 0px 0px;
-    background-size: cover;
-  }
-
-  .main-options #article-image-contact{
-    height: 400px;
-    background: url("/static/myPhoto.jpg") no-repeat 0px 0px;
-    background-size: cover;
+    padding: 10px;
   }
   
 
@@ -214,4 +172,21 @@ body {
 #contact-container{
   text-align: left;
   font-size: 1.3em;
+}
+
+
+/* 
+contact
+*/
+
+.form-control{
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+#submit{
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
 }

@@ -19,12 +19,15 @@
 
 
     <title>{% block title %} {% endblock %}</title>
-</head>
-<body>
 
     {% include "include/menu.html" %}
     {% block body %}
     {% endblock %}
+    {% include "include/footer.html" %}
+</head>
+<body>
+
+    
 
 </body>
 </html>

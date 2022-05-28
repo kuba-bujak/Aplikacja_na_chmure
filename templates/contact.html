@@ -10,21 +10,22 @@
     <div id="contact-container">
         Email: <a href="mailto:kuba.bujak0@wp.pl">kuba.bujak0@wp.pl</a><br>
         Tel. <a href="tel: 511 179 660">511 179 660</a>
-        <form>
-            <label for="nick">Username:
-                <input type="text" id="nick" placeholder="kuba-bujak">
-            </label><br>
-            <label for="email">Email:
-                <input type="text" id="email" placeholder="kuba.bujak0@wp.pl">
-            </label><br>
-            <label for="nick">Message:
-                <textarea id="message" placeholder="This is my message to you..."></textarea>
-            </label><br>
-            <input type="submit" value="Wyślij">
-        </form>
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Username">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="textarea" class="form-label">Example textarea</label>
+            <textarea class="form-control" id="textarea" rows="3"></textarea>
+          </div>
+          <div class="mb-3">
+            <input type="submit" id="submit" value="Send message">
+          </div>
     </div>
     </main>
-<footer id="footer">
-        PROJEKT I WYKONANIE <a href="https://www.facebook.com/kuba.bujak.182">Jakub Bujak</a>
-    </footer>
+
 {% endblock %}

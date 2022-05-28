@@ -33,43 +33,47 @@
             <h1 class="display-4">Home Page</h1>
             <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet justo fermentum dolor sagittis vulputate.</p>
         </div>
-        <div class="main-options">
-        <h2 class="article-header">
-            Who am I?
-        </h2>
-        <a href="{{ url_for('aboutme') }}">
-            <div id="article-image-aboutme"></div>
-        </a>
-        <p>
-            I am a professional athlete. My main competitions are hurdles and sprints but in the past
-            I was high jumper.
-            <a href="{{ url_for('aboutme') }}">Read more...</a>
-        </p>
-    </div>
-    <div class="main-options">
-        <h2 class="article-header">
-            Watch gallery
-        </h2>
-        <a href="{{ url_for('aboutme') }}">
-            <div id="article-image-gallery"></div>
-        </a>
-        <p>
-            I have been starting in many competitions so there's a lot of pictures from my carrery.
-            <a href="{{ url_for('gallery') }}">Enjoy some of them</a>
-        </p>
-    </div>
-    <div class="main-options">
-        <h2 class="article-header">
-            Contact me
-        </h2>
-        <a href="{{ url_for('aboutme') }}">
-            <div id="article-image-contact"></div>
-        </a>
-        <p>
-            If you want send me message <br><br>
-            <a href="{{ url_for('contact') }}">Click here</a>
-        </p>
-    </div>
+        <div class="row g-2">
+            <div class="main-options col-4 p-3 border">
+                <h2 class="article-header">
+                    About me
+                </h2>
+                <a href="{{ url_for('aboutme') }}">
+                    <img src="static/02.jpg" class="img-fluid" alt="Arashiyama">
+                </a>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum in tellus nec efficitur. 
+                    Nullam ac magna cursus, mollis lorem sed, condimentum lectus. <br><br>
+                    <a href="{{ url_for('aboutme') }}">Read more...</a>
+                </p>
+            </div>
+            <div class="main-options col-4 p-3 border">
+                <h2 class="article-header">
+                    Gallery
+                </h2>
+                <a href="{{ url_for('aboutme') }}">
+                    <img src="static/02.jpg" class="img-fluid" alt="Arashiyama">
+                </a>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum in tellus nec efficitur. 
+                    Nullam ac magna cursus, mollis lorem sed, condimentum lectus.<br><br>
+                    <a href="{{ url_for('gallery') }}">See my gallery</a>
+                </p>
+            </div>
+            <div class="main-options col-4 p-3 border">
+                <h2 class="article-header">
+                    Contact
+                </h2>
+                <a href="{{ url_for('aboutme') }}">
+                    <img src="static/02.jpg" class="img-fluid" alt="Arashiyama">
+                </a>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum in tellus nec efficitur. 
+                    Nullam ac magna cursus, mollis lorem sed, condimentum lectus. <br><br>
+                    <a href="{{ url_for('contact') }}">Send message</a>
+                </p>
+            </div>
+        </div>
     <article id="blog">
         <h2>MY BLOG</h2>
         <div class="blog-container">
@@ -134,7 +138,5 @@
         </div>
     </article>
     </main>
-<footer id="footer">
-        PROJEKT I WYKONANIE <a href="https://www.facebook.com/kuba.bujak.182">Jakub Bujak</a>
-    </footer>
+
 {% endblock %}
