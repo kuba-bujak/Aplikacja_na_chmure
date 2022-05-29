@@ -11,17 +11,14 @@ body {
   #navbar{
     overflow: hidden;
     z-index: 10;
-  }
-
-  .sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
+  } 
 
   .navbar-nav{
     font-size: 2em;
     padding: 10px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
   }
 
 
@@ -84,7 +81,7 @@ body {
      margin: auto;
    }
 
-   .blog-header-margin{
+   .header-margin{
     margin-bottom: 50px;
    }
 
@@ -133,37 +130,39 @@ body {
    * ABOUT ME
    */
 
-   .container #aboutme-container{
+   .container{
+     height: 100vh;
+     margin-top: 50px;
+   }
+
+   .blockquote{
      margin-top: 20px;
-     padding: 10px;
+     font-size: 1.2em;
    }
 
-   .container #aboutme-container #aboutme-photo{
-     display: inline-block;
-     background: url("/static/myPhoto.jpg") no-repeat 0px 0px;
-     background-position: right;
-     background-size: cover;
-     width: 40%;
-     height: 800px;
-     border-radius: 20%;
-     margin-right: 50px;
+   .blockquote-footer{
+     font-size: 1em;
    }
 
-   .container #aboutme-container .aboutme-text{
-     display: inline-block;
-     width: 40%;
-     font-size: 1.3em;
-     height: 800px;
+   .about-header{
+     text-align: center;
    }
+
+
+   
 
    /*
    * GALLERY
    */
-
+.container-gallery{
+  width: 70%;
+  margin-bottom: 100px;
+}
    .postcard
 {
 	text-align: center;
-	padding: 5px;
+	padding: 20px;
+  height: 30vh;
 }
 
 .postcard p
@@ -177,6 +176,12 @@ body {
 	transition: all 0.2s ease-in-out;
 }
 
+.gallery-nav-img{
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
 .photo:hover
 {
 	-webkit-transform: scale(0.9);
@@ -184,15 +189,16 @@ body {
 	transform: scale(0.9);
 }
 
-#contact-container{
-  text-align: left;
-  font-size: 1.3em;
-}
 
 
 /* 
 contact
 */
+
+#contact-container{
+  text-align: left;
+  font-size: 1.3em;
+}
 
 .form-control{
   padding: 10px;
@@ -204,4 +210,45 @@ contact
   background-color: black;
   color: white;
   padding: 10px;
+}
+
+
+/*
+Social Media Buttons
+*/
+
+.social-panel{
+  text-align: center;
+}
+.fa {
+  padding: 20px;
+  font-size: 2em;
+  width: 16%;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
 }
