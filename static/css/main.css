@@ -10,13 +10,13 @@ body {
   
   #navbar-image::before{
     content: url(../logo.png);
-    width: 50px;
+    width: 50git statusqpx;
     height: 50px;
     margin-right: 60px; 
   }
 
   .navbar-nav{
-    font-size: 2.5em;
+    font-size: 2em;
     padding: 10px;
   }
 
