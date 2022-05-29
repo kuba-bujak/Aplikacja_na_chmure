@@ -8,11 +8,15 @@ body {
    * Formatting the nav bar area
    */
   
-  #navbar-image::before{
-    content: url(../logo.png);
-    width: 50git statusqpx;
-    height: 50px;
-    margin-right: 60px; 
+  #navbar{
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
   .navbar-nav{
@@ -24,41 +28,52 @@ body {
   /*
    * Centering the body content - menu
    */
-  .container {
-    width: 1200px;
-    margin: 0 auto;
-    min-height: 1250px;
-    text-align: center;
+
+   .second-nav{
+    height: 85vh;
+   }
+  .page-header{
+    margin-top: 50px;
   }
 
-  .container .page-header{
+  .container-fluid .main-options{
     text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    color: #333;
+    background-color: #f7f7f7;
+    margin-top: 50px;
+    height: 65vh;
   }
 
-  .container .main-options{
-    text-align: center;
-    background-color: lavender;
-    border-radius: 10px;
+  .container-fluid .main-options:first-child{
+    border-right: 2px solid white;
+  }
+
+  .container-fluid .main-options:nth-child(2){
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+  }
+
+  .container-fluid .main-options:nth-child(3){
+    border-left: 2px solid white;
   }
 
   .main-options .article-header{
     color: #444;
-    padding: 10px;
+    padding: 20px;
+    font-size: 2.5em;
   }
-  
 
-  .main-options .article-image:hover{
-    cursor: pointer;
+  .index-nav-img{
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
   }
 
   .main-options p{
-    padding: 10px 10px 10px 20px;
+    padding: 40px 10px 10px 20px;
     text-align: left;
-    font-size: 0.9em;
+    font-size: 1.2em;
   }
+
 
    /*
    * Centering the body content - blog
@@ -66,32 +81,32 @@ body {
 
    #blog{
      width: 70%;
-     margin: 50px auto 0 auto;
+     margin: auto;
    }
 
-   #blog h2 {
-     text-align: center;
-     font-size: 1.7em;
-     font-weight: bold;
-     margin-bottom: 50px;
-    }
+   .blog-header-margin{
+    margin-bottom: 50px;
+   }
 
    #blog .blog-container{
-     padding: 10px;
+     padding: 20px;
      margin-bottom: 30px;
-     background-color: lavender;
+     background-color: #f7f7f7;
      border-radius: 10px;
    } 
 
-   #blog .blog-container .blog-image{
-     float: left;
-     height: 130px;
-     width: 130px;
-     text-align: center;
-     background: url("/static/logo.png") no-repeat 0px 0px;
-     background-size: cover;
-     margin-right: 20px;
+   .blog-image{
      border-radius: 10px;
+     object-fit: cover;
+   }
+
+   .blog-content{
+     font-size: 1.2em
+   }
+
+   .blog-content h3{
+     text-align: center;
+     margin-bottom: 20px;
    }
 
   /*
