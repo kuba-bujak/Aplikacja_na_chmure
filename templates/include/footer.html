@@ -10,9 +10,35 @@
     
     <footer class="text-center" id="footer">
         <!-- Copyright -->
-        <div class="text-center p-3">
-            PROJEKT I WYKONANIE <a href="https://www.facebook.com/kuba.bujak.182">Jakub Bujak</a>
+        <div class="row justify-content-around">
+            <div class="col-md-4">
+                <ul class="footer-nav address">
+                    <li>Email: <a href="mailto:kuba.bujak0@wp.pl">kuba.bujak0@wp.pl</a></li>
+                    <li>Phone: <a href="tel:511179660">511 179 660</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-center">
+                <ul class="footer-nav align-center">
+                    <li>
+                        PROJEKT I WYKONANIE: 
+                        <a href="https://www.facebook.com/kuba.bujak.182">
+                            JAKUB BUJAK
+                        </a>
+                    </li>
+                </ul>
+                
+                
+            </div>
+            <div class="col-md-4">
+                <ul class="footer-nav">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('aboutme') }}">About Me</a></li>
+                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </div>
         </div>
+
         <!-- Copyright -->
       </footer>
                     

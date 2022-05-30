@@ -4,6 +4,15 @@ body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #444;
   }
+
+  a{
+    color: rgb(42, 140, 252);
+  }
+
+  a:hover{
+    text-decoration: none;
+    color: rgb(0, 90, 192);
+  }
   /*
    * Formatting the nav bar area
    */
@@ -112,11 +121,8 @@ body {
 
    footer{
      background-color: black;
-     font-size: 0.8em;
-     text-transform: uppercase;
      color: white;
-     padding: 15px;
-     text-align: center;
+     padding: 20px;
      letter-spacing: 1px;
    }
 
@@ -124,6 +130,26 @@ body {
      color: white;
      text-decoration: none;
    }
+
+  .footer-nav{
+    list-style-type: none;
+    text-align: right;
+  }
+
+  .address{
+    text-align: left;
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .footer-nav li{
+    display: inline-block;
+    padding: 10px
+  }
+
+  .align-center{
+    text-align: center;
+  }
 
 
   /*
@@ -133,6 +159,11 @@ body {
    .container{
      height: 100vh;
      margin-top: 50px;
+   }
+
+   .about-container{
+    background-color: #f7f7f7;
+    padding: 20px 5px;
    }
 
    .blockquote{
@@ -148,6 +179,9 @@ body {
      text-align: center;
    }
 
+  .social-panel-icon:hover{
+    color: white;
+  }
 
    
 
