@@ -20,6 +20,7 @@ body {
   #navbar{
     overflow: hidden;
     z-index: 10;
+    border-bottom: 1px solid #ccc;
   } 
 
   .navbar-nav{
@@ -36,7 +37,7 @@ body {
    */
 
    .second-nav{
-    height: 85vh;
+    min-height: 85vh;
    }
   .page-header{
     margin-top: 50px;
@@ -46,7 +47,7 @@ body {
     text-align: center;
     background-color: #f7f7f7;
     margin-top: 50px;
-    height: 65vh;
+    min-height: 65vh;
   }
 
   .container-fluid .main-options:first-child{
@@ -70,7 +71,7 @@ body {
 
   .index-nav-img{
     width: 100%;
-    max-height: 550px;
+    height: 50vh;
     object-fit: cover;
   }
 
@@ -124,6 +125,7 @@ body {
      color: white;
      padding: 20px;
      letter-spacing: 1px;
+     font-size: 0.8em;
    }
 
    footer a{
@@ -157,8 +159,8 @@ body {
    */
 
    .container{
-     height: 100vh;
-     margin-top: 50px;
+     min-height: 100vh;
+     margin: 50px auto;
    }
 
    .about-container{
@@ -177,6 +179,7 @@ body {
 
    .about-header{
      text-align: center;
+     margin-top: 20px;
    }
 
   .social-panel-icon:hover{
@@ -191,12 +194,13 @@ body {
 .container-gallery{
   width: 70%;
   margin-bottom: 100px;
+  font-size: 0.9em;
 }
    .postcard
 {
 	text-align: center;
 	padding: 20px;
-  height: 30vh;
+    height: 30vh;
 }
 
 .postcard p
