@@ -22,7 +22,11 @@
 
 
     <title>{% block title %} {% endblock %}</title>
-
+    {% for message in get_flashed_messages() %}
+        <div class="alert">{{ message }}
+            <a class="close" href="">×</a>
+        </div>
+    {% endfor %}
     {% include "include/menu.html" %}
     {% block body %}
     {% endblock %}

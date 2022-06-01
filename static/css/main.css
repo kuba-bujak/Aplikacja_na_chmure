@@ -20,6 +20,9 @@ body {
   #navbar{
     overflow: hidden;
     z-index: 10;
+    border-bottom: 1px solid rgb(192, 190, 190);
+    padding: 20px;
+    background-color: #f1f0f0
   } 
 
   .navbar-nav{
@@ -30,13 +33,17 @@ body {
     margin-right: 20px;
   }
 
+  .navbar-brand{
+    font-size: 2em;
+  }
+
 
   /*
    * Centering the body content - menu
    */
 
    .second-nav{
-    height: 85vh;
+    min-height: 85vh;
    }
   .page-header{
     margin-top: 50px;
@@ -46,7 +53,7 @@ body {
     text-align: center;
     background-color: #f7f7f7;
     margin-top: 50px;
-    height: 65vh;
+    min-height: 65vh;
   }
 
   .container-fluid .main-options:first-child{
@@ -70,7 +77,7 @@ body {
 
   .index-nav-img{
     width: 100%;
-    max-height: 550px;
+    height: 50vh;
     object-fit: cover;
   }
 
@@ -157,8 +164,9 @@ body {
    */
 
    .container{
-     height: 100vh;
+     min-height: 100vh;
      margin-top: 50px;
+     margin-bottom: 50px;
    }
 
    .about-container{
@@ -189,20 +197,20 @@ body {
    * GALLERY
    */
 .container-gallery{
-  width: 70%;
+  width: 80%;
   margin-bottom: 100px;
 }
    .postcard
 {
 	text-align: center;
-	padding: 20px;
-  height: 30vh;
+  min-height: 30vh;
+  padding-top: 15px;
 }
 
 .postcard p
 {
 	padding: 5px;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 
 .photo
@@ -212,7 +220,6 @@ body {
 
 .gallery-nav-img{
   width: 100%;
-  max-height: 500px;
   object-fit: cover;
 }
 
@@ -239,11 +246,16 @@ contact
   font-size: 1.2em;
 }
 
-#submit{
+.form-submit{
   width: 100%;
-  background-color: black;
+  background-color:rgb(22, 119, 230);
   color: white;
-  padding: 10px;
+  padding: 20px;
+  border: none;
+}
+
+.form-submit:hover{
+  background-color:rgb(0, 90, 192)
 }
 
 
@@ -285,4 +297,56 @@ Social Media Buttons
 .fa-instagram {
   background: #125688;
   color: white;
+}
+
+/*
+Guestbook
+*/
+
+.post {
+  padding: 20px 20px 0 20px;
+  margin: 10px 5px;
+  background-color: #f3f3f3
+}
+
+.alert {
+  padding: 20px;
+  margin: 5px;
+  color: #970020;
+  background-color: #ffd5de;
+}
+
+.guestbook-last-item{
+  text-align: right;
+}
+
+.guestbook-item{
+  display: inline-block;
+}
+
+.guestbook-submit{
+  border: none;
+  background-color: none;
+  color:rgb(42, 140, 252);
+}
+
+.guestbook-submit:hover{
+  color:rgb(0, 90, 192);
+}
+
+.hr-margin{
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.guestbook-font-size{
+  font-size: 0.9em;
+}
+
+.delete-submit{
+  background: #cf022e;
+}
+
+.delete-submit:hover{
+  background: #970020;
 }

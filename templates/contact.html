@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Home{% endblock %}
+{% block title %}Contact{% endblock %}
 {% set active_page = "index" -%}
 {% block body %}
     <main class="container">
@@ -11,18 +11,18 @@
         <form action="mailto:kuba.bujak0@wp.pl">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username" placeholder="Username">
+            <input type="text" class="form-control" id="username" placeholder="Username" required>
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
           </div>
           <div class="mb-3">
             <label for="textarea" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="textarea" rows="3"></textarea>
+            <textarea class="form-control" id="textarea" rows="10" required></textarea>
           </div>
           <div class="mb-3">
-            <input type="submit" id="submit" value="Send message">
+            <input type="submit" class="form-submit" value="Send message">
           </div>
         </form>
     </div>

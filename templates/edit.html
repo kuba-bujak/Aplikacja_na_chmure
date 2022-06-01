@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<main class="container">
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Create Post</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet justo fermentum dolor sagittis vulputate.</p>
+    </div>
+        <div id="contact-container">
+            <form method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" 
+                        name="name"
+                        class="form-control"
+                        placeholder="Your name"
+                        value="{{ request.form['name'] or post['name'] }}" 
+                        required>
+                    </input>
+                </div>
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                        <input type="text"
+                            class="form-control"
+                            name="title"
+                            placeholder="Title"
+                            value="{{ request.form['title'] or post['title'] }}" 
+                            required>
+                        </input>
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Post Content</label>
+                    <textarea name="content"
+                              class="form-control"
+                              rows="10"
+                              required
+                              >{{ request.form['content'] or post['content']}}
+                    </textarea>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="form-submit">Edit post</button>
+                </div>
+            </form>
+            <div class="mb-3">
+                <form action="{{ url_for('delete', id=post['id']) }}" method="POST">
+                    <input type="submit" value="Delete Post" class="form-submit delete-submit"
+                        onclick="return confirm('Are you sure you want to delete this post?')">
+                </form>
+            </div>
+        </div>
+    </main>
+{% endblock %}  
