@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}Create Post{% endblock %}
+{% set active_page = "index" -%}
+{% block body %}
+<main class="container">
+    <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Create Post</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet justo fermentum dolor sagittis vulputate.</p>
+    </div>
+    <div id="contact-container">
+        <form method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" 
+                    name="name"
+                    class="form-control"
+                    placeholder="Your name"
+                    value="{{ request.form['name'] }}"
+                       id="name"
+                    required>
+            </div>
+            <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+                <input type="text"
+                    class="form-control"
+                    name="title"
+                    placeholder="Title"
+                    value="{{ request.form['title'] }}"
+                       id="title"
+                    required>
+            </div>
+            <div class="mb-3">
+            <label for="content" class="form-label">Post Content</label>
+            <textarea name="content"
+                    class="form-control"
+                    rows="10"
+                      id="content"
+                    required
+                    >{{ request.form['content'] }}
+                </textarea>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="form-submit">Create post</button>
+            </div>
+        </form>
+    </div>
+</main>
+    
+{% endblock %}
