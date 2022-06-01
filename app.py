@@ -5,9 +5,24 @@ from flask import abort, redirect, url_for, make_response
 from flask import Flask, flash, abort
 from flask_mail import Mail, Message
 import sqlite3
+from flask_dance.contrib.github import make_github_blueprint, github
+import secrets
+import os
+
 
 
 app = Flask(__name__)
+
+app.secret_key = secrets.token_hex(16) #generujemy sekretny klucz aplikacji
+os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
+
+github_blueprint = make_github_blueprint(
+ client_id="bc4c13dc2dde527c6601", #tu wklek swoj wygenerowany id z github
+ client_secret="16308336071aa3c3a4d4632752fde38d0609347e",#tu wklej swoj 
+ #wygenerowany client secret z github
+)
+app.register_blueprint(github_blueprint, url_prefix='/login')
+
 
 app.config['SECRET_KEY'] = '1234'
 
@@ -110,6 +125,18 @@ def gallery():
 @app.route("/contact")
 def contact():
     return render_template('contact.html')
+
+@app.route("/login")
+def github_login():
+    if not github.authorized:
+        return redirect(url_for('github.login'))
+    else:
+        account_info = github.get('/user')
+        if account_info.ok:
+            account_info_json = account_info.json()
+            return '<h1>Your Github name is {}'.format(account_info_json['login'])
+    return '<h1>Request failed!</h1>'
+
 
 
 '''OBSLUGA BLEDOW'''
