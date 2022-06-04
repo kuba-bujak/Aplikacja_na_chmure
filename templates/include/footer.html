@@ -5,7 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-    
+    {% set footerNav = [
+        {'url': 'home', 'display_name': 'Home'},
+        {'url': 'aboutme', 'display_name': 'About Me'},
+        {'url': 'gallery', 'display_name': 'Gallery'},
+        {'url': 'contact', 'display_name': 'Contact'},
+        {'url': 'guestbook', 'display_name': 'Guestbook'},
+        {'url': 'create', 'display_name': 'Create'},
+        {'url': 'github_login', 'display_name': 'Login'}
+    ] -%}
     {% block content %}
     
     <footer class="text-center" id="footer">
@@ -31,10 +39,14 @@
             </div>
             <div class="col-md-4">
                 <ul class="footer-nav">
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('aboutme') }}">About Me</a></li>
-                    <li><a href="{{ url_for('gallery') }}">Gallery</a></li>
-                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    {% for item in footerNav %}
+                    <li>
+                         <a
+                           href="{{url_for(item['url']) }}">
+                            {{ item['display_name'] }}
+                        </a>
+                    </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>

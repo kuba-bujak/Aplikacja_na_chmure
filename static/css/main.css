@@ -129,8 +129,9 @@ body {
    footer{
      background-color: black;
      color: white;
-     padding: 20px;
+     padding: 15px;
      letter-spacing: 1px;
+     font-size: 0.8em;
    }
 
    footer a{

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+{% set active_page = "index" -%}
+{% block body %}
+    <main class="container">
+        <div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4">Weather</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet justo fermentum dolor sagittis vulputate.</p>
+        </div>
+    <div id="contact-container">
+        <form action="/weather" method="POST">
+            <div class="mb-3">
+            <label for="city" class="form-label">City</label>
+            <input name="city" placeholder="Wpisz nazwę miasta" type="text" class="form-control" id="city" required>
+        </div>
+          <div class="mb-3">
+            <input type="submit" class="form-submit" value="Send">
+          </div>
+        </form>
+    {% if data %}
+        <p>{{data}}</p>
+    {% endif %}
+        <p>Dostawca API : OpenWeather</p>
+    </div>
+    </main>
+
+{% endblock %}
